@@ -1,0 +1,132 @@
+/* color */
+$color--white: #ffffff;
+$color--black: #000000;
+$color--pink: #F767C1;
+$color--magenta: #F20D9D;
+$color--cian: #5284ED;
+$color--grey: #ECECEC;
+$color--dark-grey: #585858;
+$color--aquamarine: #16ECB9;
+$color--turquoise:#40ECC3;
+
+/* background-color */
+$background-color--white: $color--white;
+$background-color--magenta: $color--magenta;
+$background-color--pink: $color--pink;
+$background-color--aquamarine: $color--aquamarine;
+$background-color--cian: $color--cian;
+$background-color--turquoise: $color--turquoise;
+$background-color--grey: $color--grey;
+$background-dark-grey:$color--dark-grey;
+/* font-color */
+$font__color--white: $color--white;
+$font__color--grey: $color--grey;
+$font__color--black: $color--black;
+$font__color--turquoise: $color--turquoise;
+$font__color--magenta: $color--magenta;
+
+/* font-size: mixin */
+$maxWidth: 1440;
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: min(calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})), #{$pcSize+px});
+}
+
+/* font-size for mixin */
+$h1__font-size--pc: 48;
+$h1__font-size--mobile: 28;
+$h2__font-size--pc: 32;
+$h2__font-size--mobile: 24;
+$h3__font-size--pc: 32;
+$h3__font-size--mobile:24;
+$h4__font-size--pc: 18;
+$h4__font-size--mobile: 18;
+$h5__font-size--pc: 24;
+$h5__font-size--mobile: 18;
+
+$small__font-size--pc: 16;
+$small__font-size--mobile: 12;
+$normal__font-size--pc: 16;
+$normal__font-size--mobile:16;
+$big__font-size--pc: 18;
+$big__font-size--mobile: 16;
+
+/* font-weight */
+$font-weight--light: 300;
+$font-weight--normal: 400;
+$font-weight--bold: 600;
+$font-weight--bolder: 700;
+
+/* line-height */
+$line-height--h: 1.2;
+$line-height--p: 1.5;
+
+
+/* padding */
+$section__padding--pc: 118px 0 0;
+$section__padding--small: 72px 0 0;
+$section__padding--mobile: 50px 0 0;
+$h2__padding--first: 72px 0;
+$h2__padding--mobile: 50px 0 32px;
+$h2__padding--normal: 118px 0 72px;
+$h3__padding: 0 0 32px;
+$h4__padding: 0 0 14px;
+
+/* border */
+$list__border:1px solid #162637;
+$border-radius: 8px;
+
+
+/* button */
+$btn__color--white: $font__color--white;
+$btn__color--black: $font__color--black;
+$btn__background-color--white: $background-color--white;
+$btn__background-color--magenta: $background-color--magenta;
+$btn__background-color--cian: $background-color--cian;
+$btn__background-color--hover: $background-color--turquoise;
+$btn__padding: 16px;
+$btn__border--black: 3px solid $color--black;
+$btn__font-size: 16px;
+$btn__font-weight: $font-weight--bold;
+$btn__border-radius: $border-radius;
+
+/* link */
+$link__color--black: $font__color--black;
+$link__color-black--hover: $font__color--turquoise;
+$link__color--turquoise: $font__color--turquoise;
+$link__color-turquoise--hover: $font__color--turquoise;
+
+/* grid */
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1450px) !default;
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+
+
+$xs: '(max-width: 375px)' !default;
+$sm: '(max-width: #{map-get($grid-breakpoints , sm) - 1px})' !default;
+$md: '(max-width: #{map-get($grid-breakpoints, md) - 1px})' !default;
+$lg: '(max-width: #{map-get($grid-breakpoints, lg) - 1px})' !default;
+$xl: '(max-width: #{map-get($grid-breakpoints, xl) - 1px})' !default;
+$xxl: '(max-width: #{map-get($grid-breakpoints, xxl) - 1px})' !default;
+
+$min-xs: '(min-width: 375px)';
+$min-sm: '(min-width: #{map-get($grid-breakpoints, sm)})' !default;
+$min-md: '(min-width: #{map-get($grid-breakpoints, md)})' !default;
+$min-lg: '(min-width: #{map-get($grid-breakpoints, lg)})' !default;
+$min-xl: '(min-width: #{map-get($grid-breakpoints, xl)})' !default;
+$min-xxl: '(min-width: #{map-get($grid-breakpoints, xxl)})' !default;

@@ -5,6 +5,7 @@ h1 {
 	@include adaptiv-font($h1__font-size--pc, $h1__font-size--mobile);
 	font-weight: $font-weight--bolder;
 	line-height: $line-height--h;
+
 }
 
 h2 {

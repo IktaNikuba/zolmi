@@ -1,0 +1,30 @@
+@font-face {
+   font-family: Poppins, sans-serif;
+   src: url(../font/Poppins.ttp) format("truetype");
+}
+
+@font-face {
+   font-family: Baskerville, serif;
+   src: url(../font/LibreBaskerville.ttp) format("truetype");
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+    text-decoration: none;
+    list-style: none;
+	box-sizing: border-box;
+}
+
+html,
+body {
+   font-family: Poppins, sans-serif;
+   @include adaptiv-font($big__font-size--pc, $big__font-size--mobile);
+   font-weight: $font-weight--normal;
+   line-height: $line-height--p;
+}
+
+

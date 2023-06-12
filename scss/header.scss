@@ -1,0 +1,268 @@
+.header {
+	position: sticky;
+    top: -6px;
+    background-color: white;
+    z-index: 10;
+	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.14);
+
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 26px 0 20px;
+		flex-direction: row;
+
+		@media #{$lg} {
+			flex-direction: column;
+		}
+
+		&__box {
+		   	display: flex;
+		   	align-items: center;
+		   	justify-content: space-between;
+		   	z-index: 10;
+
+		   	@media #{$lg} {
+		   		width: 100%;
+		   	}
+		}
+
+		&__brand {
+		   width: auto;
+		   height: 100%;
+		   display: block;
+
+			@media #{$lg} {
+		    	width: 65px;
+		    	vertical-align: middle;
+			}
+
+	        img {
+	           	width: 100%;
+				height: 100%;
+				vertical-align: middle;
+	        }
+		}
+
+		&__toggler {
+			width: 24px;
+			height: 24px;
+			background-color: $background-color--white;
+
+			@media #{$min-lg} {
+				display: none;
+			}
+
+			rect {
+				transition: transform 0.25s;
+			}
+
+			.toggler--active rect:nth-of-type(1) {
+				transform: rotate(45deg);
+				transform-origin: 5px 7px;
+			}
+
+			.toggler--active rect:nth-of-type(2) {
+				display: none;
+			}
+
+			.toggler--active rect:nth-of-type(3) {
+				transform: rotate(-45deg);
+				transform-origin: 3px 16px;
+			}
+		}
+
+		&__canvas {
+
+			@media #{$lg} {
+		   		position: fixed;
+				display: none;
+				align-items: center;
+				flex-direction: column;
+				justify-content: space-around;
+				background-color: #fff;
+				padding: 10vw;
+				width: 100%;
+				height: 100%;
+			}
+
+			@media #{$sm} {
+				padding: 50px 20px;
+			}
+
+			@media #{$min-lg} {
+				background-color: transparent;
+				display: flex !important;
+				align-items: center;
+				justify-content: end;
+				column-gap: 20px;
+			}
+
+			@media #{$min-xl} {
+				column-gap: 3vw;
+			}
+
+			@media #{$min-xxl} {
+				column-gap: 125px;
+			}
+		}
+
+		&__nav {
+			width: 75%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 10px;
+			list-style: none;
+			position: relative;
+
+			a {
+				font-weight: $font-weight--normal;
+			}
+
+			@media #{$lg} {
+				display: block;
+
+				a {
+					display: block;
+					padding: 10px;
+				}
+
+				li {
+					width: 100%;
+					border-bottom: 1px solid lightgrey;
+					border-radius: $border-radius;
+					text-align: center;
+				}
+
+				li:active,
+				li:hover,
+				li:focus {
+					background-color: $font__color--turquoise;
+				}
+			}
+
+			@media #{$min-lg} {
+				flex-direction: row;
+				flex-grow: 1;
+				column-gap: 45px;
+
+				a:hover,
+				a:focus, {
+					color: $font__color--turquoise;
+				}
+			}
+
+			@media #{$xl} {
+				column-gap: 25px;
+			}
+
+			.dropdown {
+				display: block;
+				position: relative;
+				text-align: center;
+				
+				@media #{$min-lg} {
+	    			&:hover > .dropdown__menu {
+					    display: block;
+					}
+				}
+
+				&__menu {
+					position: absolute;
+					width: max-content;
+					padding: 10px;
+					display: none;
+					right: 50%;
+				    transform: translate(50%, 0);
+				    background-color: $background-color--grey;
+				    border-radius: $border-radius;
+				    z-index: 5;
+				    white-space: nowrap;
+
+				    @media #{$lg} {
+						position: fixed;
+					    width: 50vw;
+					}
+
+					&--inner {
+						position: absolute;
+					    right: -50%;
+					    top: 0;
+
+					     @media #{$lg} {
+							position: static;
+							width: 100%;
+							transform: none;
+						}
+					}
+				}
+
+				&__toggler {
+					display: block;
+					color: $font__color--black;
+
+					&::after {
+						display: inline-block;
+    					margin-left: 0.255em;
+					    vertical-align: center;
+					    content: "";
+					    border-top: 0.3em solid;
+					    border-right: 0.3em solid transparent;
+					    border-bottom: 0;
+					    border-left: 0.3em solid transparent;
+
+					}
+				}
+
+				&__link {
+					display: block;
+					width: 100%;
+					height: 100%;
+					color: $font__color--black;
+				}
+			}
+		}
+
+		&__buttons {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 15px;
+
+			@media #{$lg} {
+				padding-top: 30px;
+				flex-direction: row;
+				width: 85%;
+			}
+
+			@media #{$sm} {
+				padding-top: 30px;
+				flex-direction: column;
+				width: 100%;
+			}
+
+			@media #{$min-lg} {
+				flex-direction: row;
+				align-items: center;
+			}
+
+			@media #{$min-xl} {
+				column-gap: 30px;
+			}
+		}
+
+		&__lang--mobile {
+			@media #{$min-lg} {
+				display: none;
+			}
+		}
+
+		&__lang {
+			@media #{$lg} {
+				display: none;
+			}
+		}
+	}
+}
