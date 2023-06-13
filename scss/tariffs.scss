@@ -1,0 +1,111 @@
+.tariff {
+	h2 {
+		padding: $h2__padding--normal;
+
+		@media #{$lg} {
+			padding: $h2__padding--mobile;
+		}
+
+		small {
+			display: block;
+			font-family: Poppins, sans-serif;
+			font-size: 18px;
+			font-weight: $font-weight--normal;
+			line-height: 27px;
+			text-align: center;
+			padding-top: 42px;
+
+			@media #{$sm} {
+				display: none;
+			}
+		}
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		row-gap: 20px;
+	}
+
+	&-card {
+		background-color: #FFFFFF;
+		border: 1px solid #162637;
+		border-radius: 8px;
+		text-align: center;
+		padding: 24px 32px 42px;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		row-gap: 24px;
+
+		@media #{$sm} {
+			row-gap: 12px;
+			padding-bottom: 12px;
+		}
+
+		&__price {
+			font-family: Poppins, sans-serif;
+			font-weight: $font-weight--normal;
+			font-size: 32px;
+			line-height: 1.2;
+		}
+
+		&__operations {
+			display: inline-block;
+			border-radius: 50%;
+			border: 2px solid #162637;
+			width: 20px;
+			height: 20px;
+			background-repeat: no-repeat;
+			background-position: center;
+			margin: 0 20px;
+
+			&:hover {
+				transform: scale(1.3);
+			}
+
+			&--plus {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'%3E%3Cpath d='M5 1V5M5 5V9M5 5H9M5 5H1' stroke='%23162637' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+			}
+
+			&--minus {
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='2' viewBox='0 0 10 2' fill='none'%3E%3Cpath d='M9 1H1' stroke='%23162637' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+			}
+		}
+
+		&__price-of {
+			font-weight: $font-weight--bold;
+		}
+
+		&__features {
+			font-size: 16px;
+			display: flex;
+			flex-direction: column;
+			row-gap: 18px;
+			margin-bottom: auto;
+		}
+
+		&__total-price {
+			min-height: 50px;
+			font-weight: $font-weight--bold;
+			color: $font__color--magenta;
+			font-size: 32px;
+			font-weight: 600;
+			line-height: 48px;
+		}
+
+		&__started {
+			width: auto;
+
+			@media #{$sm} {
+				width: 100%;
+			}
+		}
+	}
+
+	&__coast {
+		text-align: center;
+	}
+}
