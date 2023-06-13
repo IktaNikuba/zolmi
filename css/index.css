@@ -171,7 +171,7 @@ h4 {
   display: none !important;
 }
 
-/* body */
+/* blocks */
 @font-face {
   font-family: Poppins, sans-serif;
   src: url(../font/Poppins.ttp) format("truetype");
@@ -199,7 +199,6 @@ body {
   line-height: 1.5;
 }
 
-/* header */
 .header {
   position: sticky;
   top: -6px;
@@ -458,7 +457,6 @@ body {
   }
 }
 
-/* main */
 .hero {
   padding: 72px 0 0;
 }
