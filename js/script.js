@@ -94,9 +94,11 @@
 						closeActiveMenu();
 					}
 				});
-			}*/
+			}
 
-			toggleSubmenu();
+			toggleSubmenu();*/
+
+
 
 			/* modal */
 			let modalLang = document.querySelector('.language');
