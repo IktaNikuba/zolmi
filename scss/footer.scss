@@ -1,0 +1,50 @@
+.footer {
+	padding-top: 118px;
+
+	@media #{$lg} {
+		padding-top: 60px;
+	}
+
+	&__logo {
+		width: 102px;
+
+		@media #{$lg} {
+			width: 66px;
+			padding: 20px 0;
+		}
+
+		a {
+			display: inline-block;
+		    width: 100%;
+		    height: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__link-list {
+		display: flex;
+	    flex-direction: column;
+	    row-gap: 12px;
+	    padding-bottom:30px;
+	}
+
+	&__list-title {
+		font-weight: $font-weight--bold;
+	}
+
+	&__list-item {
+		a {
+			color: $font__color--black;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__copyright {
+		padding: 24px 0;
+	}
+}
