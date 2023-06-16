@@ -52,54 +52,6 @@
 			};
 			submenu();
 
-			/*function toggleSubmenu() {
-				const dropdowns = document.querySelectorAll('.dropdown__toggler');
-
-				function closeActiveMenu(current = null) {
-					const parents = [];
-					if (current) {
-						let currentParent = current.parentNode;
-						while (currentParent) {
-							if (currentParent.classList.contains('navbar__nav')) break;
-							if (currentParent.classList.contains('dropdown__menu')) parents.push(currentParent);
-							currentParent = currentParent.parentNode;
-						}
-
-						const activeMenus = document.querySelectorAll('.menu--active');
-						activeMenus.forEach((menu) => {
-							if (!parents.includes(menu) || menu === current) {
-								menu.classList.remove('menu--active');
-							}
-						});
-					}
-				}
-
-				function toggleMenu(event) {
-					const menu = event.currentTarget.nextElementSibling;
-					if (menu.classList.contains('menu--active')) {
-						menu.classList.remove('menu--active');
-					} else {
-						closeActiveMenu(menu);
-						menu.classList.add('menu--active');
-					}
-				}
-
-				dropdowns.forEach((dropdown) => {
-					dropdown.addEventListener('click', toggleMenu);
-				});
-
-				document.querySelector('.navbar__canvas').addEventListener('click', (event) => {
-					const checkClickInMenu = Array.from(event.composedPath(), (elem) => elem.className).includes('dropdown__toggler');
-					if (!checkClickInMenu) {
-						closeActiveMenu();
-					}
-				});
-			}
-
-			toggleSubmenu();*/
-
-
-
 			/* modal */
 			let modalLang = document.querySelector('.language');
 
@@ -114,3 +66,11 @@
 			document.querySelector('.closeDialog').onclick = function() {
 			    modalLang.close();
 			};
+
+			/* demo-video */
+			document.querySelector(".demo-video__button--play").addEventListener("click", () => {
+				console.log(document.querySelector(".demo-video__button--play"));
+				console.log(document.querySelector(".demo-video__popup--starting"));
+
+				document.querySelector(".demo-video__popup--starting").classList.toggle("hidden")
+			});
