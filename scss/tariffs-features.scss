@@ -1,0 +1,185 @@
+.tariffs-features {
+	padding: $section__padding--pc;
+
+	@media #{$md} {
+		padding: $section__padding--mobile;
+	}
+
+	h5 {
+		font-size: 24px;
+		font-weight: $font-weight--bolder;
+		line-height: $line-height--h;
+
+		small {
+			display: block;
+			font-family: Poppins, sans-serif;
+			font-size: 18px;
+			font-weight: $font-weight--normal;
+			line-height: 27px;
+			color: $font__color--black;
+			padding: 8px 0 24px;
+
+			@media #{$sm} {
+				padding: 4px 0 8px;
+			}
+		}
+	}
+
+	.tariffs-features__table {
+		.table {
+			width: 100%;
+			border-collapse: collapse;
+			caption-side: bottom;
+
+			&__caption {
+				padding-top: 44px;
+				text-align: left;
+				color: #7C7C7C;
+			}
+
+			&__row--header {
+				width: 50%;
+
+				@media #{$md} {
+					width: 70%;
+				}
+			}
+
+			&__row--data {
+				width: 15%;
+
+				@media #{$md} {
+					width: auto;
+				}
+			}
+
+			tr {
+				&:hover	{
+					background-color: #F5F5F6;
+				}
+
+				th {
+					padding: 18px;
+				}
+
+				td {
+					font-size: 16px;
+					font-weight: 400;
+					line-height: 24px;
+					border: 1px solid #F4F4F5;
+					padding: 18px;
+
+					@media #{$md} {
+						padding: 6px;
+						border-right: none;
+						border-left: none;
+					}
+				}
+
+				td:last-child {
+					border-right: none;
+				}
+
+				td:first-child {
+					border-left: 0;
+				}
+			}
+
+			&__empty {
+				@media #{$md} {
+					display: none
+				}
+			}
+
+			&__header--manage {
+				color: $font__color--turquoise;
+			}
+
+			&__header--grow {
+				color: $font__color--magenta;
+			}
+
+			&__started {
+				width: fit-content;
+				margin: auto;
+			}
+
+			&__headline {
+				text-align: left;
+				background-color: $background-color--grey;
+				@include adaptiv-font($h5__font-size--pc, $h5__font-size--mobile);
+				font-weight: 400;
+				line-height: 36px;
+			}
+
+			&__column--manage,
+			&__column--grow {
+				text-align: center;
+			}
+
+			&__column {
+				position: relative;
+			}
+
+			&__column-toggler--left {
+				width: 25px;
+				height: 25px;
+				position: absolute;
+				top: 50%;
+				left: 0;
+				svg path {
+					fill: rgb(54, 64, 74);
+				}
+			}
+
+			&__column-toggler--right {
+				width: 25px;
+				height: 25px;
+				position: absolute;
+				top: 50%;
+				right: 0;
+				svg path {
+					fill: rgb(22, 38, 55);
+				}
+			}
+
+			&__column--grow {
+				.table__column-toggler--left,
+				.table__column-toggler--right {
+					&:hover path {
+						fill: $color--turquoise;
+					}
+				}
+			}
+
+			&__column--manage {
+				.table__column-toggler--left,
+				.table__column-toggler--right {
+					&:hover path {
+						fill: $color--magenta;
+					}
+				}
+			}
+
+			&__column-toggler {
+				cursor: pointer;
+
+				@media #{$min-md} {
+					display: none
+				}
+			}
+
+			&__row--toggler {
+				text-align: center;
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 27px;
+				color: #40ECC3;
+
+				a {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.bla-bla {
+	h2 {
+		padding: $h2__padding--normal;
+
+		@media #{$lg} {
+			padding: $h2__padding--mobile;
+		}
+
+		small {
+			display: block;
+			font-family: Poppins, sans-serif;
+			font-size: 18px;
+			font-weight: $font-weight--normal;
+			line-height: 27px;
+			text-align: center;
+			padding-top: 42px;
+
+			@media #{$sm} {
+				display: none;
+			}
+		}
+	}
+
+	&__button {
+		width: fit-content;
+		margin: auto;
+
+		@media #{$sm} {
+				width: 100%;
+			}
+	}
+}

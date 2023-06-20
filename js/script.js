@@ -74,3 +74,60 @@
 
 				document.querySelector(".demo-video__popup--starting").classList.toggle("hidden")
 			});
+
+			/* table-column */
+			let columnToggler = document.querySelectorAll(".table__column-toggler");
+			let columnManage = document.querySelectorAll(".table__column--manage");
+			let columnGrow = document.querySelectorAll(".table__column--grow");
+
+			if (window.innerWidth <= 768) {
+				document.querySelectorAll(".table__column").forEach((item) => {
+				    item.colSpan="2"
+				});
+
+				columnToggler.forEach((item) => {
+				    item.onclick = () => {
+				        columnManage.forEach((item) => {
+				            item.classList.toggle("table--hidden");
+				        });
+				        columnGrow.forEach((item) => {
+				            item.classList.toggle("table--hidden");
+				        });
+				    }
+				});
+			};
+
+			/* table-row*/
+			let showMoreEssential = document.querySelectorAll(".table__row--essential");
+			let showMoreSheduling = document.querySelectorAll(".table__row--scheduling");
+			let showMoreManagement = document.querySelectorAll(".table__row--management");
+			let showMoreBooking = document.querySelectorAll(".table__row--booking");
+
+			document.querySelector(".table__row--toggler-essential").onclick = () => {
+				document.querySelector(".table__row--toggler-essential").classList.toggle("hidden")
+			    showMoreEssential.forEach((item) => {
+			        item.classList.toggle("hidden");
+			    })
+			};
+
+			document.querySelector(".table__row--toggler-scheduling").onclick = () => {
+				document.querySelector(".table__row--toggler-scheduling").classList.toggle("hidden")
+			    showMoreSheduling.forEach((item) => {
+			        item.classList.toggle("hidden");
+			    })
+			};
+
+			document.querySelector(".table__row--toggler-management").onclick = () => {
+				document.querySelector(".table__row--toggler-management").classList.toggle("hidden")
+			    showMoreManagement.forEach((item) => {
+			        item.classList.toggle("hidden");
+			    })
+			};
+
+			document.querySelector(".table__row--toggler-booking").onclick = () => {
+				document.querySelector(".table__row--toggler-booking").classList.toggle("hidden")
+			    showMoreBooking.forEach((item) => {
+			        item.classList.toggle("hidden");
+			    })
+			};
+
