@@ -23,7 +23,7 @@
 					<div class="navbar__canvas">
 					    <ul class="navbar__nav">
 					        <li class="dropdown">
-					            <a class="dropdown__toggler" href="#pricing">Pricing</a>
+					            <a class="dropdown__toggler" style="color: #40ECC3;" href="#pricing">Pricing</a>
 					            <ul class="dropdown__menu">
 					                <li class="dropdown">
 					                	<a class="dropdown__link" type="button" href="pricing-page.html">Подробнее</a>
@@ -78,7 +78,7 @@
 					                </li>
 					            </ul>
 					        </li>
-			                <li><a class="dropdown__link" href="#" style="color: #40ECC3;">Demo</a></li>
+			                <li><a class="dropdown__link" href="demo-page.html" >Demo</a></li>
 					        <li class="navbar__lang--mobile"><a class="dropdown__link" href="#">Language</a></li>
 						</ul>
 				    	<div class="navbar__buttons">
@@ -90,6 +90,7 @@
 			   </nav>
 			</div>
 		</header>
+
 		<main>
 			<section class="first-section">
 				<div class="container">
@@ -100,93 +101,88 @@
 							</h1>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col">
+							<div class="first-section__button">
+								<a href="#" class="btn btn--magenta">Create your free schedule</a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			<section class="how-it-work">
+			<section class="tariff" id="pricing">
 				<div class="container">
 					<div class="row">
 						<div class="col">
-							<h2>How it <span class="header__background-line">works</span></h2>
+							<h2>Join over <span class="header__background-line">6,000 registered</span> businesses like yours
+								<small>Prices for {country} in {currency} and if you like to look for your country click <a href="#">here</a></small>
+							</h2>
 						</div>
 					</div>
-					<div class="row">
+
+					<div class="row tariff__cards">
+						<div class="col-md-6 col-lg-5 col-xxl-4">
+							<div class="tariff-card tariff-card--manage">
+								<h4 class="tariff-card__name">
+									<span class="header__background-line">Manage</span>
+								</h4>
+								<div class="tariff-card__price">Free</div>
+								<div class="tariff-card__price-of">forever</div>
+								<ul class="tariff-card__features">
+									<li>Unlimited Bookings</li>
+									<li>Unlimited Customers</li>
+									<li>Unlimited Staff</li>
+									<li>Unlimited Email Reminders</li>
+									<li>Unlimited Customer Satisfaction Surveys</li>
+								</ul>
+								<a href="#" class="tariff-card__started btn btn--white">Get Started</a>
+							</div>
+						</div>
+						<div class="col-md-6 col-lg-5 col-xxl-4">
+							<div class="tariff-card tariff-card--grow">
+								<h4 class="tariff-card__name">
+									<span class="header__background-line header__background-line--magenta">Grow</span>
+								</h4>
+								<div class="tariff-card__price">
+									<a class="tariff-card__operations tariff-card__operations--plus"></a>
+									<span class="tariff-card__amount">1</span>
+									<a class="tariff-card__operations tariff-card__operations--minus"></a>
+								</div>
+								<div class="tariff-card__price-of">Team member</div>
+								<ul class="tariff-card__features">
+									<li>All Manage Features +</li>
+									<li>Unlimited SMS Text Message Reminders</li>
+									<li>Unlimited Business Reporting</li>
+									<li>Unlimited Email Reminders</li>
+									<li>Unlimited Customer Satisfaction Surveys</li>
+								</ul>
+								<div class="tariff-card__total-price">Total:$<span>4</span></div>
+								<a href="#" class="tariff-card__started btn btn--white">Get Started</a>
+							</div>
+						</div>
 						<div class="col-12">
-							<div class="how-it-work__picture-box">
-								<img class="how-it-work__picture" src="/img/demo-picture.png" alt="">
-							</div>
-						</div>
-						<div class="col-sm-12 col-md">
-							<div class="how-it-work__parts">
-								<div class="how-it-work__picture--mobile">
-									<img src="/img/book-anywhere.png" alt="">
-								</div>
-								<h5>Book anywhere</h5>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md">
-							<div class="how-it-work__parts">
-								<div class="how-it-work__picture--mobile">
-									<img src="/img/calendar.png" alt="">
-								</div>
-								<h5>Appointments stored in your calendar</h5>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md">
-							<div class="how-it-work__parts">
-								<div class="how-it-work__picture--mobile">
-									<img src="/img/reminders.png" alt="">
-								</div>
-								<h5>Appointment Reminders sent to client to reduce no-shows</h5>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md">
-							<div class="how-it-work__parts">
-								<div class="how-it-work__picture--mobile">
-									<img src="/img/checkout.png" alt="">
-								</div>
-								<h5>Checkout the client Including payment and adding retail </h5>
-							</div>
-						</div>
-						<div class="col-sm-12 col-md">
-							<div class="how-it-work__parts how-it-work__parts--last">
-								<div class="how-it-work__picture--mobile">
-									<img src="/img/survey.png" alt="">
-								</div>
-								<h5>Follow up customer satisfaction survey sent to the client</h5>
+							<div class="tariff__coast">
+							    <p>cost per SMS is {x}</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="demo-video">
+			<section class="bla-bla">
 				<div class="container">
 					<div class="row">
-						<div class="col-12">
-							<div class="demo-video__content">
-								<div class="demo-video__wrapper">
-									<video class="demo-video__player" controls preload="none" poster="/img/demo-poster.jpg">
-										<source src="#" type="video/mp4">
-									</video>
-									<div class="demo-video__popup--starting">
-										<a class="demo-video__button--play">
-										</a>
-									</div>
-								</div>
-							</div>
+						<div class="col">
+							<h2>Set up your new hair salon schedule <span class="header__background-line">in 15 minutes</span>
+								<small>Get yourself acup of tea and create your schedule. It is easy and quick to set up.</small>
+							</h2>
 						</div>
-						<div class="col-12">
-							<div class="demo-video__features-box" >
-								<ul class="demo-video__features-list">
-									<li class="demo-video__features-item">Free IOS & Android app</li>
-									<li class="demo-video__features-item">No contract</li>
-									<li class="demo-video__features-item">Free Set Up</li>
-									<li class="demo-video__features-item">Customer Support</li>
-								</ul>
-							</div>
-							<div class="demo-video__button">
-								<a href="#" class="btn btn--magenta">Create your free schedule</a>
+					</div>
+					<div class="row">
+						<div class="col">
+							<div class="bla-bla__button">
+								<a href="#" class="btn btn--magenta">Create schedule</a>
 							</div>
 						</div>
 					</div>
@@ -249,8 +245,8 @@
 				<div class="row">
 					<div class="col-sm-12 col-lg">
 						<div class="footer__logo">
-							<a href="/index.html">
-								<img src="/img/logo-zolmi.svg" alt="">
+							<a href="../index.html">
+								<img src="../img/logo-zolmi.svg" alt="">
 							</a>
 						</div>
 					</div>
@@ -355,6 +351,74 @@
 			</form>
 		</dialog>
 
-		<script src="../js/script.js"></script>
+		<script>
+
+			/* header */
+			let openCanvas = document.querySelector(".navbar__toggler");
+			let menuCanvas = document.querySelector(".navbar__canvas");
+			let bodyHidden = document.querySelector(".body");
+			let togglerIcon = document.querySelector(".toggler__icon")
+
+			openCanvas.addEventListener("click" , () => {
+				bodyHidden.classList.toggle("body--hidden");
+				menuCanvas.classList.toggle("show");
+				togglerIcon.classList.toggle("toggler--active")
+			});
+
+			/* navbar__dropdown */
+			let submenu = function() {
+
+				if (window.innerWidth <= 992) {
+					let dropdown = document.querySelectorAll(".dropdown__toggler");
+
+					function deleteActive(current = null, event) {
+						let parents = [];
+						if (current) {
+							let currentParent = current.parentNode;
+							while (currentParent) {
+								if (currentParent.classList.contains("navbar__nav")) break;
+								if (currentParent.classList.contains("dropdown__menu")) parents.push(currentParent);
+								currentParent = currentParent.parentNode;
+							};
+
+							let activeMenu = document.querySelectorAll(".menu--active");
+							activeMenu.forEach(function(item) {
+								if (!parents.includes(item) || item === current) item.classList.remove("menu--active");
+							});
+						};
+					};
+
+					dropdown.forEach((item) => {
+						item.addEventListener("click", (event) => {
+							deleteActive(event.currentTarget.nextElementSibling, event);
+							event.currentTarget.nextElementSibling.classList.add("menu--active");
+						});
+					});
+
+	                document.querySelector(".navbar__canvas").addEventListener( 'click', (event) => {
+		                let checkСlickInMenu = Array.from(event.composedPath(), (elem) => elem.className).includes("dropdown__toggler");
+		                if ( !checkСlickInMenu ) {
+		                	dropdown.forEach((item) => item.nextElementSibling.classList.remove("menu--active"));
+		            	};
+		        	});
+				};
+			};
+			submenu();
+
+			/* modal */
+			let modalLang = document.querySelector('.language');
+
+			document.querySelector('.navbar__lang').onclick = () => {
+			    modalLang.showModal();
+			}
+
+			document.querySelector('.navbar__lang--mobile').onclick = () => {
+			    modalLang.showModal();
+			}
+
+			document.querySelector('.closeDialog').onclick = () => {
+			    modalLang.close();
+			}
+		</script>
 	</body>
 </html>
