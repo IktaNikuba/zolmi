@@ -1,0 +1,108 @@
+.full-reviews {
+	padding: $section__padding--pc;
+
+	@media #{$md} {
+		padding: $section__padding--mobile;
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.feedback {
+		padding-bottom: 32px;
+		border-bottom: 1px solid #DADADA;
+		margin-bottom: 24px;
+
+		&__visual {
+			width: 100%;
+		}
+
+		&__text {
+			&:before {
+				content: "";
+				display: block;
+				background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='22' viewBox='0 0 23 22' fill='none'%3E%3Cpath d='M2.50641 22C0.83547 19.2075 0 16.3899 0 13.5472C0 11.0314 0.614316 8.62893 1.84295 6.33962C3.09615 4.02516 4.90224 1.91195 7.26122 0L10.0994 1.77358C10.3451 1.92453 10.5171 2.11321 10.6154 2.33963C10.7137 2.54088 10.7628 2.74214 10.7628 2.94339C10.7628 3.16981 10.7137 3.38365 10.6154 3.58491C10.5171 3.78617 10.4065 3.96227 10.2837 4.11321C9.96421 4.49057 9.62019 4.93082 9.2516 5.43396C8.90758 5.93711 8.58814 6.49057 8.29327 7.09434C7.9984 7.67296 7.75267 8.31446 7.55609 9.01887C7.35951 9.72327 7.26122 10.478 7.26122 11.283C7.26122 12.1384 7.39637 13.0566 7.66667 14.0377C7.93696 14.9937 8.39156 16 9.03045 17.0566C9.2516 17.4088 9.36218 17.761 9.36218 18.1132C9.36218 18.9182 8.91987 19.4843 8.03526 19.8113L2.50641 22ZM14.7436 22C13.0726 19.2075 12.2372 16.3899 12.2372 13.5472C12.2372 11.0314 12.8515 8.62893 14.0801 6.33962C15.3333 4.02516 17.1394 1.91195 19.4984 0L22.3365 1.77358C22.5823 1.92453 22.7543 2.11321 22.8526 2.33963C22.9509 2.54088 23 2.74214 23 2.94339C23 3.16981 22.9509 3.38365 22.8526 3.58491C22.7543 3.78617 22.6437 3.96227 22.5208 4.11321C22.2014 4.49057 21.8574 4.93082 21.4888 5.43396C21.1448 5.93711 20.8253 6.49057 20.5304 7.09434C20.2356 7.67296 19.9898 8.31446 19.7933 9.01887C19.5967 9.72327 19.4984 10.478 19.4984 11.283C19.4984 12.1384 19.6335 13.0566 19.9038 14.0377C20.1741 14.9937 20.6287 16 21.2676 17.0566C21.4888 17.4088 21.5994 17.761 21.5994 18.1132C21.5994 18.9182 21.1571 19.4843 20.2724 19.8113L14.7436 22Z' fill='%2340ECC3'/%3E%3C/svg%3E");
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-position: center;
+				width: 23px;
+				height: 22px;
+				padding: 18px 0;
+			}
+		}
+
+		&__from-where {
+			display: grid;
+		    align-items: center;
+		    justify-items: flex-start;
+		    justify-content: flex-start;
+		    padding-top: 18px;
+		    @include adaptiv-font($small__font-size--pc, $small__font-size--mobile);
+		    grid-template-columns: auto max-content auto;
+		    grid-template-rows: 58px 58px;
+		    grid-template-areas:
+		    "logo name stars"
+		    "logo profession salon";
+
+		    @media #{$md} {
+		    	grid-template-columns: 59px max-content auto;
+		    	grid-template-rows: 29px 29px;
+		    }
+		}
+
+		&__foto {
+			grid-area: logo;
+			width: 100%;
+		}
+
+		&__name {
+			grid-area: name;
+			font-weight: 700;
+			line-height: 27px;
+			padding: 0 5px;
+		}
+
+		&__profession {
+			grid-area: profession;
+			padding: 0 5px;
+		}
+
+		&__stars-raiting {
+			grid-area: stars;
+			width: 70px;
+			height: 17px;
+			position: relative;
+
+			&:after,
+			&:before {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				content: "";
+				background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 14'%3E%3Cmask id='a' fill='%23fff'%3E%3Cpath d='M6.424.817a1 1 0 0 1 1.794 0l1.387 2.811a1 1 0 0 0 .752.547l3.105.454a1 1 0 0 1 .553 1.705L11.77 8.521a1 1 0 0 0-.288.886l.53 3.088a1 1 0 0 1-1.451 1.054l-2.775-1.46a1 1 0 0 0-.93 0L4.08 13.55a1 1 0 0 1-1.451-1.054l.53-3.088a1 1 0 0 0-.288-.886L.626 6.334A1 1 0 0 1 1.18 4.63l3.104-.454a1 1 0 0 0 .753-.547L6.424.817Z'/%3E%3C/mask%3E%3Cpath d='M6.424.817a1 1 0 0 1 1.794 0l1.387 2.811a1 1 0 0 0 .752.547l3.105.454a1 1 0 0 1 .553 1.705L11.77 8.521a1 1 0 0 0-.288.886l.53 3.088a1 1 0 0 1-1.451 1.054l-2.775-1.46a1 1 0 0 0-.93 0L4.08 13.55a1 1 0 0 1-1.451-1.054l.53-3.088a1 1 0 0 0-.288-.886L.626 6.334A1 1 0 0 1 1.18 4.63l3.104-.454a1 1 0 0 0 .753-.547L6.424.817Z' stroke='%23FFB21C' stroke-width='12' stroke-linecap='round' stroke-linejoin='round' mask='url(%23a)'/%3E%3C/svg%3E");
+				background-repeat: repeat-x;
+				background-size: 14px;
+				width: 100%;
+				height: 100%;
+				filter: grayscale(100%);
+			}
+
+			&:after {
+				filter: grayscale(0);
+			}
+		}
+
+		.raiting-4:after {
+				width: 80%;
+			}
+
+		&__salon-name {
+			grid-area: salon;
+			color: $font__color--turquoise;
+			padding: 0 5px;
+		}
+	}
+}
