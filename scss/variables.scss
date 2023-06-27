@@ -33,6 +33,14 @@ $maxWidth: 1440;
 	font-size: min(calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})), #{$pcSize+px});
 }
 
+/* line-height: mixin */
+$maxWidth: 1440;
+@mixin adaptiv-line-height($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	line-height: min(calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})), #{$pcSize+px});
+}
+
 /* font-size for mixin */
 $h1__font-size--pc: 48;
 $h1__font-size--mobile: 28;

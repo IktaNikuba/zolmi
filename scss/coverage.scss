@@ -1,0 +1,83 @@
+.coverage {
+  h2 {
+    padding: $h2__padding--normal;
+
+    @media #{$lg} {
+      padding: $h2__padding--mobile;
+    }
+  }
+}
+
+.coverage__stats {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 15%;
+}
+
+.stats {
+  position: relative;
+  font-family: Libre Baskerville, serif;
+  font-weight: 700;
+  text-align: left;
+
+  &__circle {
+    position: absolute;
+    bottom: 20%;
+    right: 30%;
+    display: block;
+    width: 87px;
+    height: 87px;
+    z-index: -1;
+
+    border-radius: 50%;
+    @media #{$lg} {
+      width: 80px;
+      height: 80px;
+    }
+
+    @media #{$sm} {
+      width: 75px;
+      height: 75px;
+    }
+
+    @media #{$xs} {
+      width: 63px;
+      height: 63px;
+    }
+
+    &--countries  {
+      background-color: $background-color--pink;
+    }
+    &--language{
+      background-color: $background-color--aquamarine;
+    }
+  }
+
+  &__number{
+    display: block;
+    @include adaptiv-font(64, 46);
+    @include adaptiv-line-height(60, 57);
+  }
+
+  &__type{
+    display: block;
+    font-weight: 400;
+    @include adaptiv-font(18, 13);
+    line-height: 1px;
+  }
+}
+
+.coverage__link {
+  color: $link__color--turquoise;
+
+  &::hover {
+    color: $link__color-turquoise--hover,
+  }
+
+  &-place {
+    text-align: center;
+    padding-top: 56px;
+  }
+}
