@@ -3,7 +3,7 @@
  * 5 |     @include adaptiv-font($h1__font-size--pc, $h1__font-size--mobile);
  *   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  *   '
- *   scss/common.scss 5:2  root stylesheet */
+ *   scss\common.scss 5:2  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 5 \2502      @include adaptiv-font($h1__font-size--pc, $h1__font-size--mobile);\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss/common.scss 5:2  root stylesheet";
+  content: "Error: Undefined mixin.\a   \2577 \a 5 \2502      @include adaptiv-font($h1__font-size--pc, $h1__font-size--mobile);\d\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss\\common.scss 5:2  root stylesheet";
 }
