@@ -2088,7 +2088,7 @@ body {
 .geography__map-place {
   width: 100%;
   text-align: center;
-  height: 55vh;
+  height: 100vw;
   max-height: 812px;
 }
 @media (max-width: 1199px) {

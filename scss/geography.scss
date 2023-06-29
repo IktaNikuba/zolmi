@@ -9,11 +9,10 @@
 }
 
 .geography__map {
-
   &-place {
     width: 100%;
     text-align: center;
-    height: 55vh;
+    height: 100vw;
     max-height: 812px;
 
     @media #{$xl} {
@@ -45,6 +44,7 @@
 
   text-align: center;
 }
+
 .geography__list {
   font-weight: 600;
   line-height: 27px;
