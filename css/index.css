@@ -2091,14 +2091,24 @@ body {
   height: 55vh;
   max-height: 812px;
 }
-@media (max-width: 575px) {
+@media (max-width: 1199px) {
   .geography__map-place {
-    display: none;
+    max-height: 640px;
+  }
+}
+@media (max-width: 991px) {
+  .geography__map-place {
+    max-height: 500px;
   }
 }
 @media (max-width: 767px) {
   .geography__map-place {
     max-height: 350px;
+  }
+}
+@media (max-width: 575px) {
+  .geography__map-place {
+    display: none;
   }
 }
 

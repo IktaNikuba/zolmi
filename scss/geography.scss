@@ -16,13 +16,18 @@
     height: 55vh;
     max-height: 812px;
 
-    @media #{$sm} {
-      display: none;
+    @media #{$xl} {
+      max-height: 640px;
+    }
+    @media #{$lg} {
+      max-height: 500px;
     }
     @media #{$md} {
       max-height: 350px;
     }
-
+    @media #{$sm} {
+      display: none;
+    }
   }
 
   width: 100%;
