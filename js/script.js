@@ -67,13 +67,10 @@
 			    modalLang.close();
 			};
 
-			/* demo-video */
-			document.querySelector(".demo-video__button--play").addEventListener("click", () => {
-				console.log(document.querySelector(".demo-video__button--play"));
-				console.log(document.querySelector(".demo-video__popup--starting"));
-
+			/*/!* demo-video *!/
+			document.querySelector(".demo-video__button--play").onclick = function () {
 				document.querySelector(".demo-video__popup--starting").classList.toggle("hidden")
-			});
+			};*/
 
 			/* table-column */
 			let columnToggler = document.querySelectorAll(".table__column-toggler");
